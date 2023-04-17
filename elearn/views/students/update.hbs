@@ -1,0 +1,59 @@
+<main>
+    <section>
+        <form action="students/{{student._id}}/update-profile" method="post">
+            {{!-- first name --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="firstName"/>
+                <span>first name</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- last name --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="lastName"/>
+                <span>last name</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- street address --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="streetAddress"/>
+                <span>street address</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- city --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="city"/>
+                <span>city</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- province --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="province"/>
+                <span>province</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- zip --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="zip"/>
+                <span>zip</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- username --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="username" required/>
+                <span>username</span>
+                <i></i>
+            </div>
+            <br>
+            {{!-- submit button --}}
+            <div class="form-inputs input-submit">
+                <input type="submit" value="signup" />
+            </div>
+        </form>
+    </section>
+</main>

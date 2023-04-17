@@ -1,0 +1,33 @@
+{
+  "name": "elearn",
+  "description": "course provision and tutor appointment platform",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "6.0.7",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.3",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.21",
+    "mongodb": "^5.0.0",
+    "mongoose": "^6.8.4",
+    "morgan": "~1.9.1",
+    "multer": "*",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "author": "william banda",
+  "license": "MIT"
+}

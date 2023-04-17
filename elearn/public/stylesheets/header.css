@@ -1,0 +1,118 @@
+header{
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--primaryColor);
+    color: #fff;
+}
+#header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#logo > a{
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-style: oblique;
+    color: #fff;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+}
+.menu .menu-child{
+    padding: .5em 1em;
+}
+.menu .current-child{
+    background: rgba(255, 255, 255, 0.4);
+}
+.menu-child .service-link{
+    text-decoration: none;
+    color: #fff;
+}
+.navigation{
+    overflow: hidden;
+    transition: all 200ms;
+}
+#sidebar{
+    width: 160px;
+    height: 100vh;
+    height: 100svh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--primaryColor);
+    display: none;
+    z-index: 20;
+}
+.btn-sidebar{
+    border: none;
+    outline: none;
+    background: transparent;
+    overflow: hidden;
+}
+.sidebar-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+.sidebar-content > div{
+    background: transparent;
+    margin: .8em auto;
+    position: relative;
+}
+.sidebar-content > div > a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    padding-left: .8em;
+}
+.sidebar-content > div > a > svg{
+    margin-right: .8em;
+}
+.feather{
+    width: 24px;
+    height: 24px;
+    transition: ease-in 200ms;
+}
+.feather:hover{
+    transform: scale(1.1);
+}
+.feather-menu{
+    color: var(--secondaryColor);
+}
+.feather-x{
+    color: var(--secondaryColor);
+}
+@media screen and (max-width: 480px){
+    #sidebar{
+        width: 80px;
+        font-size: .75em;
+    }
+    .feather{
+        width: 14px;
+        height: 14px;
+        transition: ease-in 200ms;
+    }
+    .feather-menu{
+        width: 24px;
+        height: 24px;
+    }
+    .feather-x{
+        width: 24px;
+        height: 24px;
+    }
+    .sidebar-content > div > a{
+        font-size: .8em;
+    }
+}

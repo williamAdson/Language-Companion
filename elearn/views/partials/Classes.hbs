@@ -1,0 +1,28 @@
+{{#each classes}}
+    {{#each this}}
+        {{#if title}}
+            <div class="company-courses">
+            <div class="course-card">
+                <div class="card-img">
+                    <img src="/images/learn.jpg" alt="course image">
+                </div>
+                <div class="card-details">
+                    <span># {{topic}}</span>
+                    <h1>
+                        {{title}}
+                    </h1>
+                    <p>
+                        {{description}}
+                    </p>
+                </div>
+                <div class="card-actions">
+                    <a href="/classes/{{_id}}/details" class="btn btn-current">
+                        看课程
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    {{/each}}
+{{/each}}
+

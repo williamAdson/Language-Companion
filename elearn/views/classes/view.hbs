@@ -1,0 +1,54 @@
+<main>
+    <section>
+        {{log course}}
+        {{#if course}}
+        <div class="view-course-container">
+            {{#each course.image}}
+            <div class="course-img">
+                {{#if image}}
+                <img src="/uploads/{{name}}" alt="{{ ./ title}}">
+                {{else}}
+                <img src="/images/learn.jpg" alt="{{ ./ title}}">
+                {{/if}}
+            </div>
+            {{/each}}
+            <div class="course-details">
+                {{!-- course details --}}
+                <div class="details-metadata">
+                    {{#each instructor}}
+                    <a href="#">#
+                        {{name}}
+                    </a>
+                    {{/each}}
+                    <a href="#">#
+                        {{language}}
+                    </a>
+                </div>
+                <h1>
+                    {{course.title}}
+                </h1>
+                <p>
+                    {{course.description}}
+                </p>
+                <p>
+                    views: {{course.views}}
+                </p>
+                <div class="details-actions">
+                    <a href="/instructors/classes/delete/{{course._id}}">
+                        删除课程
+                    </a>
+                    <a href="/instructors/classes/update/{{course._id}}">
+                        更新课程
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{#unless course}}
+        <div class="notice feedback">
+            <p>遇到问题显示课程</p>
+        </div>
+        {{/unless}}
+    </section>
+
+</main>

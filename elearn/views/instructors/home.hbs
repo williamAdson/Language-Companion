@@ -1,0 +1,35 @@
+<main>
+    <section style="margin:100px auto;"> 
+        <div class="dashboard-info">
+            <div class="info-greeting">
+                welcome {{user.username}}
+            </div>
+            <div class="dashboard-classes">
+                {{#each user.classAuthor}}
+                    <div class="board-class-conn">
+                        <div class="board-conn-img">
+                            <i>@</i>
+                        </div>
+                        <div class="board-conn-text">
+                            <p>{{class_title}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+            <div class="dashboard-actions">
+                <a href="instructors/classes/create">
+                    创建课程
+                </a>
+                <a href="#">
+                    查看课程
+                </a>
+                <a href="#">
+                    更新课程
+                </a>
+                <a href="#">
+                    删除课程
+                </a>
+            </div>
+        </div>
+    </section>
+</main>

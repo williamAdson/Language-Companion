@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{#if title}} 
+            {{title}} {{^}} 语小伴
+        {{/if}}
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/classes.css">
+    <link rel="stylesheet" href="/stylesheets/forms.css">
+    <script src="/javascripts/main.js" defer></script>
+    <script src="/javascripts/appointments.js" defer></script>
+</head>
+<body>
+    {{> Header}}
+    {{#if success_msg}}
+    <div class="feedback">
+        <p>
+            {{success_msg}}
+        </p>
+    </div>
+    {{/if}}
+    {{#if login_err}}
+    <div class="feedback">
+        <p>
+            {{login_err}}
+        </p>
+    </div>
+    {{/if}}
+    {{{body}}}
+</body>
+</html>

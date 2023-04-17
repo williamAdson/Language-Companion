@@ -1,0 +1,30 @@
+<main>
+    {{#if course}}
+    <section class="form-container create-course-conn">
+        <div class="create-course">
+            <form action="/instructors/classes/updated" method="post">
+                <div class="form-inputs input-select">
+                    <span>选语言</span><br>
+                    <select name="lang">
+                            <option value="english">英文</option>
+                            <option value="chinese">中文</option>
+                            <option value="{{course.language}}" selected></option>
+                    </select>
+                </div>
+                <div class="form-inputs input-text">
+                    <input type="text" name="title" value="{{course.title}}">
+                    <span>课程标题</span>
+                </div>
+                <div class="form-inputs input-area">
+                    <textarea name="desc" cols="30" rows="5" ></textarea>
+                    <span>课程介绍</span>
+                </div>
+                <input type="hidden" name="courseID" value="{{course._id}}">
+                <div class="form-inputs input-submit">
+                    <input type="submit" value="更新课程">
+                </div>
+            </form>
+        </div>
+    </section>
+    {{/if}}
+</main>

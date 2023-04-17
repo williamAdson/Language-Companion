@@ -1,0 +1,167 @@
+<main>
+    <section class="mini-board" style="margin-top: 100px;">
+        <div class="board-actions">
+            <div class="appointment-card">
+                <div class="card-title">
+                    <h1 class="account-form-title">
+                        寻找预约语小伴
+                    </h1>
+                </div>
+                <form action="/students/appointment/result" method="post" class="appointment-form auto-appointment-form">
+                    <div class="forms-input input-checkbox">
+                        <label for="english">英文</label>
+                        <input type="checkbox" name="english">
+                        <label for="chinese">中文</label>
+                        <input type="checkbox" name="chinese">
+                    </div>
+                    <div class="forms-input input-checkbox">
+                        <label for="speak">口语</label>
+                        <input type="checkbox" name="speak">
+
+                        <label for="listen">听力</label>
+                        <input type="checkbox" name="listen">
+
+                        <label for="read">阅读</label>
+                        <input type="checkbox" name="read">
+
+                        <label for="write">书写</label>
+                        <input type="checkbox" name="write">
+                    </div>
+                    <div>
+                        {{#each user}}
+                        <input type="hidden" name="name" value="{{user.username}}">
+                        {{/each}}
+                    </div>
+                    <div class="forms-input input-submit">
+                        <input type="submit" value="自动寻找">
+                    </div>
+                    <a type="button" class="show-link show-man">
+                        看看手动预约
+                    </a>
+                </form>
+                <form action="/students/appointment/result" method="post" class="appointment-form manual-appointment-form">
+                    <div class="form-inputs input-checkbox">
+                        <label for="english">英文</label>
+                        <input type="checkbox" name="english">
+                        <label for="chinese">中文</label>
+                        <input type="checkbox" name="chinese">
+                    </div>
+                    <div class="form-inputs input-checkbox">
+                        <label for="speak">口语</label>
+                        <input type="checkbox" name="speak">
+
+                        <label for="listen">听力</label>
+                        <input type="checkbox" name="listen">
+
+                        <label for="read">阅读</label>
+                        <input type="checkbox" name="read">
+
+                        <label for="write">书写</label>
+                        <input type="checkbox" name="write">
+                    </div>
+                    <div class="form-inputs input-select">
+                        <label for="day">地方：</label>
+                        <select name="location">
+                            <option value="ZYNC-LIBRARY-4TH-FLOW">
+                                遵义师范学院图书馆四楼
+                            </option>
+                            <option value="ZNYC-LAKESIDE">
+                                遵义师范学院湖边
+                            </option>
+                            <option value="ZYNC-SHENSILOU-2ND-FLOW">
+                                遵义师范学院慎思楼二楼
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-inputs input-select">
+                        <label for="day">本周：</label>
+                        <select name="day">
+                            <option value="monday">
+                                周一
+                            </option>
+                            <option value="tuesday">
+                                周二
+                            </option>
+                            <option value="wednesday">
+                                周三
+                            </option>
+                            <option value="thursday">
+                                周四
+                            </option>
+                            <option value="friday">
+                                周五
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-inputs input-select">
+                        <label for="time">时间：</label>
+                        <select name="time">
+                            <optgroup label="MORNING">
+                                <option value="08:30-09:30">
+                                    08:30-09:30
+                                </option>
+                                <option value="10:00-11:30">
+                                    10:00-11:30
+                                </option>
+                            </optgroup>
+                            <optgroup label="AFTERNOON">
+                                <option value="14:00-15:00">
+                                    14:00-15:00
+                                </option>
+                                <option value="15:30-16:30">
+                                    15:30-16:30
+                                </option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        {{#each user}}
+                        <input type="hidden" name="name" value="{{user.username}}">
+                        {{/each}}
+                    </div>
+                    <div class="form-inputs input-submit">
+                        <input type="submit" value="手动寻找">
+                    </div>
+                    <a type="button" class="show-link show-auto">
+                        看看自动预约
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="board-stats">
+            {{log user}}
+            {{#if user}}
+            <div>
+                <h2 class="stats-headline">欢迎回来</h2>
+                {{#each user}}
+                    {{#if username}}
+                    <h1 class="stats-headline headline-data"> 
+                        用户名：{{username}} 
+                    </h1>
+                    <p class="stats-headline headline-data">
+                        邮箱：{{email}}
+                    </p>
+                    {{/if}}
+                {{/each}}
+            </div>
+            <div>
+                <h2 class="stats-headline">你最近的约会</h2>
+                {{#if user.appointments}}
+                {{#each user}}
+                    {{#each appointments}}
+                        <div class="recent-row">
+                            <p>{{appointment_tutor}}</p>
+                            <p>{{appointment_location}}</p>
+                            <p>{{appointment_date}}</p>
+                        </div>
+                    {{/each}}
+                    
+                {{/each}}
+                {{else}}
+                    <p>你还没有预约</p>
+                {{/if}}
+            </div>
+            {{/if}}
+        </div>
+    </section>
+</main>

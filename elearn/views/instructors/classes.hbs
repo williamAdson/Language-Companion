@@ -1,0 +1,11 @@
+<main>
+    <section>
+        <h2 style="font-size: 2em; text-transform:capitalize; margin-top: 1em;">
+            {{instructor.firstName}}'s Classes
+        </h2>
+        <a href="/instructors/{{instructor._id}}/home">
+            Instructor's Dashboard
+        </a>
+        {{> MyClassesTable}}
+    </section>
+</main>

@@ -1,0 +1,26 @@
+{{!-- horizontal menu --}}
+<header>
+    <section id="header-content">
+        <div class="navigation">
+            <button class="btn btn-sidebar open-btn" onclick="openSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            {{> Sidebar}}
+        </div>
+        <div id="logo">
+            <a href="/">语小伴</a>
+        </div>
+        <ul class="menu">
+            <li class="menu-child current-child">
+                <a href="/" class="service-link">首页</a>
+            </li>
+            <li class="menu-child">
+                <a href="/classes" class="service-link">课程</a>
+            </li>
+            <li class="menu-child">
+                <a href="/users/signup" class="service-link">注册</a>
+            </li>
+        </ul>
+    </section>
+</header>

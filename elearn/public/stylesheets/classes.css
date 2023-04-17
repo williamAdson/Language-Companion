@@ -1,0 +1,17 @@
+.viewAllCoursesPage{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.courseSearchAll-container{
+    margin-top: 6em;
+}
+.coursesAll-container .courses-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    align-content: center;
+}
+.coursesAll-container .company-courses{
+    margin-right: 1em;
+    margin-bottom: 1em;
+}

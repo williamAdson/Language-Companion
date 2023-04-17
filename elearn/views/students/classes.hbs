@@ -1,0 +1,15 @@
+<main>
+    <section>
+        <h2 style="font-size: 2em; text-transform:capitalize; margin-top: 1em;">
+            {{student.firstName}}'s Classes
+        </h2>
+        <div style="margin: .8em auto;">
+            <a href="/appointments" class="btn btn-register" style="background-color: #b46f14;">
+                make an appointment
+            </a>
+        </div>
+        {{> MyClassesTable}}
+        <a href="/{{student._id}}">get student data</a>
+        <a href="/students/{{student.username}}/update-profile">update profile</a>
+    </section>
+</main>

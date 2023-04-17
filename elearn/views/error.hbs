@@ -1,0 +1,11 @@
+<h1>
+  {{#if message}} 
+      {{message}} {{^}} Page Not Found <br>        
+  {{/if}}
+</h1>
+<h2>
+  {{#if error}} 
+      {{error.status}} {{^}} Internal Server Error <br>
+      {{log error.stack}}       
+  {{/if}}
+</h2>

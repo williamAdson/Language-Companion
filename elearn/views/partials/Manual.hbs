@@ -1,0 +1,64 @@
+<div class="appointment-selection-container" style="margin-top: 100px; display:flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h2 class="header2">手动寻找学伴</h2>
+    <form action="/appointments/manual-search/manual" method="post">
+    {{!-- appointment location --}}
+        <div class="select-text appointment-topics">
+            <select name="subject" class="topics-data" readonly>
+                <option value="listening">
+                    听力
+                </option>
+                <option value="writing">
+                    书写
+                </option>
+                <option value="speaking">
+                    口语
+                </option>
+                <option value="reading">
+                    阅读
+                </option>
+            </select>
+        </div>
+        {{!-- appointment time --}}
+        <div class="select-text appointment-time">
+            <input type="time" name="time" value="14:00" class="time-data"/>
+        </div>
+        {{!-- appointment date --}}
+        <div class="appointment-date">
+            <div class="date-btn prev-date">&LessLess;</div>
+            <div>
+                <select name="date" id="appointment-date" aria-readonly="true">
+                    <option value="sunday">周日</option>
+                    <option value="monday">周一</option>
+                    <option value="tuesday">周二</option>
+                    <option value="wednesday">周三</option>
+                    <option value="thursday">周四</option>
+                    <option value="friday">周五</option>
+                    <option value="saturday">周六</option>
+                </select>
+            </div>
+            <div class="date-btn next-date">&GreaterGreater;</div>
+        </div>
+        {{!-- appointment location --}}
+        <div class="select-text appointment-location">
+            <select name="location" class="date-location" readonly>
+                <option value="学校图书馆3楼">
+                    学校图书馆3楼
+                </option>
+                <option value="国际教育学院3楼323房间">
+                    国际教育学院3楼323房间
+                </option>
+            </select>
+        </div>
+        {{!-- student data --}}
+        <div>
+            <input type="hidden" name="student-id" value="{{student._id}}">
+        </div>
+        <div>
+            <input type="hidden" name="student-username" value="{{student.username}}">
+        </div>
+        {{!-- search button --}}
+        <div class="form-submit-container">
+            <input type="submit" value="开始寻找" class="btn btn-current">
+        </div>
+    </form>
+</div>

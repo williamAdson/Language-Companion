@@ -1,0 +1,37 @@
+<div id="classes-table">
+    <div class="table-sections table-subtitle">
+        <div class="class-headers class-id-title">
+            <h4>class id</h4>
+        </div>
+        <div class="class-headers class-name-title">
+            <h4>class name</h4>
+        </div>
+        <div class="class-headers class-details">
+            <h4>class details</h4>
+        </div>
+    </div>
+    <div class="table-sections table-content">
+        {{#if student}}
+            {{!-- student registered to these classes --}}
+            {{#each student.classes}}
+                <div class="class-id" >{{class_id}}</div>
+                <div class="class-title">{{class_title}}</div>
+            {{/each}}
+
+
+        {{else}}
+            {{!-- instructor registered to these classes --}}
+            {{#each instructor.classes}}
+                <div class="class-id" >{{class_id}}</div>
+                <div class="class-title">{{class_title}}</div>
+
+                <a href="/instructors/home/{{instructor._id}}">
+                    Instructor's Dashboard
+                </a>
+            {{/each}}
+
+        {{/if}}
+
+        
+    </div>
+</div>

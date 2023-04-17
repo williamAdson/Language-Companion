@@ -1,0 +1,357 @@
+*{
+  --chinese-font-main: Georgia, "Times New Roman", "FangSong", "??", STFangSong, "????", serif;
+  --chinese-font-secondary: Georgia, "Times New Roman", "KaiTi", "??", STKaiti, "????", serif;
+  --primaryColor: #534E4E;
+  --secondaryColor: #BAF378;
+  --mainColor: #fff; 
+  --notifications: #ff7373;
+}
+body {
+  box-sizing: border-box;
+  margin: 0 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex-grow: 1;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 500px;
+  transition: all 200ms;
+}
+img:hover{
+  transform: scale(1.1);
+}
+.btn{
+  margin: .3em .5em;
+  padding: .5em 2em;
+  box-shadow: 0em 0em .3em var(--primaryColor);
+  border-radius: .3em;
+  cursor: pointer;
+}
+.btn-account{
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+.btn-current{
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+.feedback > p{
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--primaryColor);
+  color: var(--notifications);
+  padding: .5em auto;
+  margin: .5em auto;
+}
+.home-sections .section-header{
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--secondaryColor);
+  opacity: .4;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.home-sections .section-header::before,
+.home-sections .section-header::after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid var(--secondaryColor);
+  margin: auto;
+}
+/*
+** LANDING PAGE HOME DESIGN 
+*/
+.landing-section{
+  margin-top: 4em;
+  background: var(--secondaryColor);
+}
+.company-profile{
+  max-width: 980px;
+  margin: 0 auto;
+}
+.company-profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+** LANDING PAGE SERVICES DESIGN
+*/
+.services-section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.services-section .services-card{
+  width: 200px;
+  height: 150px;
+  background: var(--primaryColor);
+  box-shadow: 0em 0em .3em var(--primaryColor);
+  border-radius: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-card a{
+  font-size: 1em;
+  font-family: var(--chinese-font-secondary);
+  color: var(--mainColor);
+  margin-bottom: .5em;
+}
+.services-card svg{
+  width: 4em;
+  height: 4em;
+}
+/*
+** LANDING PAGE ABOUT DESIGN
+*/
+.about-section{
+  background: var(--secondaryColor);
+}
+
+/*
+** HOME PAGE COURSE DISPLAY SECTION 
+*/
+.courses-section .courses-container{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.company-courses{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-card{
+  max-width: 200px;
+  position: relative;
+  box-shadow: 0em 0em .3em var(--primaryColor);
+  overflow: hidden;
+}
+.course-card .card-img{
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: 100%;
+  overflow: hidden;
+}
+.course-card .card-details{
+  margin: .5em auto;
+  padding: .5em auto;
+}
+.card-details h1{
+  font-size: 1;
+  font-family: var(--chinese-font-secondary);
+  text-align: center;
+  margin: .5em auto;
+}
+.card-details p{
+  font-size: .75em;
+  margin-bottom: .5em;
+  padding-left: .5em;
+}
+.course-card .card-actions{
+  margin: 1em auto;
+  padding: .5em auto;
+}
+.card-actions a{
+  font-size: .75em;
+  padding: .3em .8em;
+}
+/* home contact section designs */
+.company-contact{
+  margin-bottom: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-details{
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+  margin-top: 1.4em;
+  padding: .3em;
+  border-radius: .3em;
+  position: relative;
+}
+.form-details input{
+  width: 300px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--mainColor);
+  position: relative;
+}
+.form-details textarea{
+  width: 300px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--mainColor);
+  position: relative;
+}
+.form-details span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.form-details input:focus ~ span,
+.form-details textarea:focus ~ span{
+  color: var(--primaryColor);
+  transform: scale(.75) translateY(-1.4em);
+}
+.form-details input::content("") ~ span,
+.form-details textarea::content("") ~ span{
+  color: var(--primaryColor);
+  transform: scale(.75) translateY(-1.4em);
+}
+::target-text{
+  background: var(--primaryColor);
+  color: var(--notifications);
+}
+/* company about page design */
+.company-about{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.company-about .about-details{
+  grid-column: span 2;
+}
+
+/* view courses page */
+.view-course{
+  margin: 100px auto;
+}
+.view-container .view-img{
+  max-width: 980px;
+  height: 200px;
+  overflow: hidden;
+}
+.view-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100%;
+}
+.view-img img{
+  transform: scale(1.1);
+}
+/*
+** LANDING PAGE FOOTER DESIGN
+*/
+footer{
+  background: var(--primaryColor);
+}
+.foot-notices{
+  padding: .5em 1em;
+  background: var(--primaryColor);
+  color: var(--mainColor);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.foot-notices > h3{
+  font-family: var(--chinese-font-secondary);
+}
+.foot-notices a{
+  color: var(--mainColor);
+}
+.foot-notices .color-design{
+  width: 100px;
+  display: flex;
+  gap: .5em;
+}
+.foot-notices .color-design::before,
+.foot-notices .color-design::after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 3px solid var(--secondaryColor);
+  margin: auto;
+}
+.foot-notices .social-links{
+  margin: .5em auto;
+  padding: .5em .5em;
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+}
+.social-links a{
+  padding: .8em;
+  border-radius: .3em;
+}
+.copyright{
+  font-size: .75em;
+  text-align: center;
+  background: var(--primaryColor);
+  color: var(--mainColor);
+  margin: 0;
+}
+/* 
+** APPOINTMENT INTERACTION DESIGN
+*/
+.stats-headline{
+  font-size: 1em;
+  font-family: var(--chinese-font-secondary);
+  margin: .8em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.headline-data{
+  text-align: left;
+  margin: 1em auto;
+}
+.stats-notice{
+  font-size: .8em;
+  font-family: var(--chinese-font-main);
+}
+
+/* mobile screen responsive design */
+@media screen and (max-width: 420px) {
+  #header-content .menu{
+    display: none;
+  }
+  #header-content > div{
+    margin-right: 1em;
+  }
+  .company-profile{
+    flex-direction: column;
+  }
+  /* footer mobile designs  */
+  .foot-notices{
+    grid-template-columns: 1fr;
+  }
+  /*
+  ** HOME PAGE SERVICES DISPLAY SECTION 
+  */
+  .services-section > div {
+    flex-direction: column;
+  }
+  .services-section .services-card{
+    width: 150px;
+    height: 100px;
+  }
+  .services-card a{
+    font-size: .8em;
+  }
+  .services-card svg{
+    width: 2em;
+    height: 2em;
+  }
+  /*
+  ** HOME PAGE COURSE DISPLAY SECTION 
+  */
+  .courses-section .courses-container{
+    flex-direction: column;
+  }
+}

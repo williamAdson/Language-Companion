@@ -1,0 +1,96 @@
+<main class="account-forms-container">
+    <section class="account-btn-conn">
+        <div class="register-form-btn green-btn">
+            注册表
+        </div>
+        <div class="login-form-btn">
+            登录表
+        </div>
+    </section>
+    <section class="account-form register-form">
+        <h2 class="account-form-title">注册</h2>
+        <p class="account-form-desc">注册新账号</p>
+        <form action="/users/signup" method="post" autocomplete="off">
+            {{!-- check for errors --}}
+            {{log errors}}
+            {{#if errors}}
+                {{#each errors}}
+                    <p style=" color: red; font-size: .75em;">
+                        {{msg}}
+                    </p>
+                {{/each}}
+            {{/if}}
+            {{!-- account type --}}
+            <div class="form-inputs input-select">
+                <label for="accountType">账号类:</label>
+                <select name="accountType">
+                    <option value="student">学生</option>
+                    <option value="instructor">教师</option>
+                </select>
+            </div>
+{{#if user}}     
+            {{!-- first name --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="firstName"/>
+                <span>first name</span>
+            </div>
+            {{!-- last name --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="lastName"/>
+                <span>last name</span>
+            </div>
+            {{!-- street address --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="streetAddress"/>
+                <span>street address</span>
+            </div>
+            {{!-- city --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="city"/>
+                <span>city</span>
+            </div>
+            {{!-- province --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="province"/>
+                <span>province</span>
+            </div>
+            {{!-- zip --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="zip"/>
+                <span>zip</span>
+            </div>
+{{/if}}
+            {{!-- username --}}
+            <div class="form-inputs input-text">
+                <input type="text" name="username" required/>
+                <span>用户名</span>
+            </div>
+            {{!-- email --}}
+            <div class="form-inputs input-text">
+                <input type="email" name="email" />
+                <span>电子邮箱</span>
+            </div>
+            {{!-- password --}}
+            <div class="form-inputs input-text">
+                <input type="password" name="password" />
+                <span>密码</span>
+            </div>
+            {{!-- confirm password --}}
+            <div class="form-inputs input-text">
+                <input type="password" name="password2" />
+                <span>确认密码</span>
+            </div>
+            {{!-- submit button --}}
+            <div class="form-inputs input-submit">
+                <input type="submit" value="注册" />
+            </div>
+        </form>
+    </section>
+    <section class="account-form login-form">
+        <div class="welcome welcome-login-sidebar">
+            <h2 class="account-form-title">登录</h2>
+            <p class="account-form-desc">以经有账号</p>
+              {{> Login}}
+        </div>
+    </section>
+</main>
