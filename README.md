@@ -1,25 +1,22 @@
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
- <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="project landing page." src="https://github.com/williamAdson/Language-Companion/blob/main/landingpg.JPG">
-</picture>
-
 ## About Project
 
-Language-Companion is a language learning online community, which helps users find fellow language enthusiasts and resource material for acquiring linguistic skills. The platform mainly focuses on a twofold content delivery system, which encompasses courses feature and user-tutor matching.
+> Language-Companion is a language learning online community, which helps users find fellow language enthusiasts and resource material for acquiring linguistic skills. The platform mainly focuses on a twofold content delivery system, which encompasses courses feature and user-tutor matching.
+
+<picture>
+ <img alt="project landing page." src="https://github.com/williamAdson/Language-Companion/blob/main/landingpg.JPG">
+</picture>
 
 ## About Technologies
 
 main technologies used.
 
-| Rank         | Languages  |
-|-------------:|------------|
-|  Language:   | Javascript |
-|  Environment:| NodeJS     |
-|  Database:   | MongoDB    |
+|:---:|Technologies|:---:|
+|:---|---|---|
+|  NodeJs   | ExpressJS | MongoDB |
+|  Handlebars | HTML     | CSS |
 
 ---
-> FullStack project
+> full stack project on to create an online learning environment.
 
 <details>
 <summary>contributions</summary>
