@@ -1,3 +1,6 @@
+## Language-Companion
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/williamAdson/Language-Companion/total?logo=github">
+
 ## Description
 
 > Language-Companion is a language learning online community, which helps users find fellow language enthusiasts and resource material for acquiring linguistic skills. The platform mainly focuses on a twofold content delivery system, which encompasses courses feature and user-tutor matching.
@@ -29,7 +32,7 @@ main technologies used.
 |  Handlebars | HTML     | CSS |
 
 ---
-> full stack project on to create an online learning environment.
+> full stack project on how to go about creating an online learning environment
 
 <details>
 <summary>contributions</summary>
