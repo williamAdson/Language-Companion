@@ -1,7 +1,7 @@
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
  <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
- <img alt="project landing page." src="YOUR-DEFAULT-IMAGE">
+ <img alt="project landing page." src="https://github.com/williamAdson/Language-Companion/blob/main/landingpg.JPG">
 </picture>
 
 ## About Project
