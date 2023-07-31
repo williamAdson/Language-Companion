@@ -1,4 +1,4 @@
-## About Project
+## Description
 
 > Language-Companion is a language learning online community, which helps users find fellow language enthusiasts and resource material for acquiring linguistic skills. The platform mainly focuses on a twofold content delivery system, which encompasses courses feature and user-tutor matching.
 
@@ -6,7 +6,20 @@
  <img alt="project landing page." src="https://github.com/williamAdson/Language-Companion/blob/main/landingpg.JPG">
 </picture>
 
-## About Technologies
+## Use
+
+> make sure you have <strongNodeJs</strong> installed on your system.
+
+```
+  1. node v19.1.0 or greater 
+  2. configure mongodb 
+  3. fork repo 
+  4. clone repo 
+  5. npm install
+  6. star repo to follow future changes 
+```
+
+## Technologies
 
 main technologies used.
 
@@ -21,7 +34,7 @@ main technologies used.
 <details>
 <summary>contributions</summary>
 
-### How To Go About It
+## Contributions
 
 No contributions allowed 
 usage of project code is free
